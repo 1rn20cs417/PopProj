@@ -1,0 +1,229 @@
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik
+$ git init
+Initialized empty Git repository in C:/Users/VINAY KUMAR/Desktop/liveproject/pro
+jectvinvik/.git/
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git checkout -b child
+Switched to a new branch 'child'
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (child)
+$ git add .
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (child)
+$ git commit -m "hp child first commit"
+[child (root-commit) 3c8f6d2] hp child first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 homepage.txt
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (child)
+$ git remote add origin https://github.com/1rn20cs417/PopProj.git
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (child)
+$ git pusg origin child
+git: 'pusg' is not a git command. See 'git --help'.
+
+The most similar command is
+        push
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (child)
+$ git push origin child
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 238 bytes | 238.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'child' on GitHub by visiting:
+remote:      https://github.com/1rn20cs417/PopProj/pull/new/child
+remote:
+To https://github.com/1rn20cs417/PopProj.git
+ * [new branch]      child -> child
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (child)
+$ git switch master
+fatal: invalid reference: master
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (child)
+$ git switch master
+fatal: invalid reference: master
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (child)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (child)
+$ git branch
+* child
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (child)
+$ git checkout -b master
+Switched to a new branch 'master'
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git branch
+  child
+* master
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git log --oneline
+3c8f6d2 (HEAD -> master, origin/child, child) hp child first commit
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git add .
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git commit -m "master commit for sent"
+[master 5c86235] master commit for sent
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sent.txt
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git push origin master
+To https://github.com/1rn20cs417/PopProj.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/1rn20cs417/PopProj.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git pull login.txt
+fatal: 'login.txt' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git pull Login.txt
+fatal: 'Login.txt' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git pull origin Login.txt
+fatal: couldn't find remote ref Login.txt
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git pull origin master
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 193 bytes | 14.00 KiB/s, done.
+From https://github.com/1rn20cs417/PopProj
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+fatal: refusing to merge unrelated histories
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git remote add origin https://github.com/1rn20cs417/PopProj.git
+error: remote origin already exists.
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git pull origin ^C
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git pull origin  https://github.com/1rn20cs417/PopProj.git
+fatal: invalid refspec 'https://github.com/1rn20cs417/PopProj.git'
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git clone origin master
+fatal: repository 'origin' does not exist
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/VINAY KUMAR/Desktop/liveprojec
+t/projectvinvik/.git/
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git pull origin master
+From https://github.com/1rn20cs417/PopProj
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/VINAY KUMAR/Desktop/liveprojec
+t/projectvinvik/.git/
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git remote add origin  https://github.com/1rn20cs417/PopProj.git
+error: remote origin already exists.
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git pull origin master
+From https://github.com/1rn20cs417/PopProj
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git merge master
+Already up to date.
+
+Merge branch 'master' of https://github.com/1rn20cs417/PopProj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From https://github.com/1rn20cs417/PopProj
+ * branch            master     -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ Login.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Login.txt
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git add .
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git commit -m "master pulled file commit"
+[master e6678e5] master pulled file commit
+ 1 file changed, 1 insertion(+)
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$ git push origin master
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 918 bytes | 459.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/1rn20cs417/PopProj.git
+   c723b64..e6678e5  master -> master
+
+VINAY KUMAR@DESKTOP-I28KGLS MINGW64 ~/Desktop/liveproject/projectvinvik (master)
+$
